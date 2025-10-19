@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Enable CORS for all routes with no restrictions
-app.use(cors());
+//app.use(cors());
 
 // Parse JSON bodies
 app.use(express.json());
