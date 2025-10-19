@@ -54,29 +54,17 @@ app.get('/widget', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   return res.json({
     message: 'footer widget server',
-    text: ` <span style="margin-left: 2px;">
-              <a 
+    text: `<span style="margin-left: 2px;">
+              <a style="color: white; text-decoration: underline; hover: text-gray-300;"
                 href=${link} 
                 target=${target || '_blank'} 
                 rel="noopener noreferrer"
-                style="color: white; text-decoration: underline; hover: text-gray-300;"
-              >| ${text}</a>
+              > | ${text}</a>
             </span>`,
     link,
     target
   })
 });
-
-
-            <span className='ml-2'>
-              <a 
-                href={credits.link} 
-                target={credits.target || '_blank'} 
-                rel="noopener noreferrer"
-                className='text-white hover:text-gray-300 underline'
-              >{`| ${credits.text}`}
-              </a>
-            </span>
 
 // Start the server
 app.listen(PORT, () => {
