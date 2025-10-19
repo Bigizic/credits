@@ -5,8 +5,30 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Enable CORS for all routes with no restrictions
-//app.use(cors());
+const allowedOrigins = [
+  'http://tohannieesskincare.com',
+  'https://tohannieesskincare.com',
+  'http://www.tohannieesskincare.com',
+  'https://www.tohannieesskincare.com',
+  'http://beauty.tohannieesskincare.com',
+  'https://beauty.tohannieesskincare.com',
+  'https://thelinkhangouts.com',
+  'http://localhost:8080',
+  'http://localhost:5173',
+].filter(Boolean);
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('not allowed by cors'));
+    }
+  },
+  credentials: true,
+}));
 
 // Parse JSON bodies
 app.use(express.json());
