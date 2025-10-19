@@ -12,7 +12,7 @@ const allowedOrigins = [
   'https://www.tohannieesskincare.com',
   'http://beauty.tohannieesskincare.com',
   'https://beauty.tohannieesskincare.com',
-  'https://thelinkhangouts.com',
+  'https://thelinkhangout.com',
   'http://localhost:8080',
   'http://localhost:5173',
 ].filter(Boolean);
