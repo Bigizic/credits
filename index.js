@@ -48,14 +48,35 @@ app.get('/', (req, res) => {
 
 // Serve the credits widget JavaScript file
 app.get('/widget', (req, res) => {
+  const link = 'mailto:olalekanisaac75@gmail.com';
+  const target = '_blank';
+  const text = 'Powered by Niox';
   res.setHeader('Content-Type', 'application/json');
   return res.json({
     message: 'footer widget server',
-    text: 'Powered by Niox',
-    link: 'mailto:olalekanisaac75@gmail.com',
-    target: '_blank'
+    text: ` <span style="margin-left: 2px;">
+              <a 
+                href=${link} 
+                target=${target || '_blank'} 
+                rel="noopener noreferrer"
+                style="color: white; text-decoration: underline; hover: text-gray-300;"
+              >| ${text}</a>
+            </span>`,
+    link,
+    target
   })
 });
+
+
+            <span className='ml-2'>
+              <a 
+                href={credits.link} 
+                target={credits.target || '_blank'} 
+                rel="noopener noreferrer"
+                className='text-white hover:text-gray-300 underline'
+              >{`| ${credits.text}`}
+              </a>
+            </span>
 
 // Start the server
 app.listen(PORT, () => {
