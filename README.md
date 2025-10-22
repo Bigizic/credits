@@ -1,4 +1,4 @@
--[x] ENDPOINTS:
+- [x] ENDPOINTS:
 ```bash
 curl https://niox-credits.onrender.com; echo ""
 
