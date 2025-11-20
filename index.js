@@ -10,6 +10,7 @@ const pre_urls = [
   'beauty.tohannieesskincare.com',
   'thelinkhangout.com',
   'bbglownatural.com',
+  'localhost:8080',
 ]
 
 const httpsOrigins = pre_urls.map(url => `https://${url}`);
