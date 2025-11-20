@@ -62,7 +62,7 @@ app.get('/widget', (req, res) => {
                 href=${link} 
                 target=${target || '_blank'} 
                 rel="noopener noreferrer"
-              > | ${text}</a>
+              >  ${text}</a>
             </span>`,
     link,
     target

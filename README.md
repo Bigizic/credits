@@ -1,13 +1,6 @@
-# credits
-footer anchor credits hosted on vercel to be reusable
+- [x] ENDPOINTS:
+```bash
+curl https://niox-credits.onrender.com; echo ""
 
-
-### how to use
-
-```html
-<script
-  src="https://credits-jet.vercel.app/credits-widget.js"
-  data-credits-config='{"text": "Made with ❤️ by Your Company", "link": "https://yourcompany.com", "target": "_blank"}'
-  defer>
-</script>
+{"message":"Isaac Credits Widget Server","version":"1.0.0","endpoints":{"/":"This endpoint - returns server info","/widget":"Serves the credits widget JavaScript file"},"timestamp":"2025-10-22T20:11:46.765Z"}
 ```
