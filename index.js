@@ -5,17 +5,20 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const pre_urls = [
+  'tohannieesskincare.com',
+  'beauty.tohannieesskincare.com',
+  'thelinkhangout.com',
+  'bbglownatural.com',
+]
+
+const httpsOrigins = pre_urls.map(url => `https://${url}`);
+const httpOrigins = pre_urls.map(url => `http://${url}`);
+
 const allowedOrigins = [
-  'http://tohannieesskincare.com',
-  'https://tohannieesskincare.com',
-  'http://www.tohannieesskincare.com',
-  'https://www.tohannieesskincare.com',
-  'http://beauty.tohannieesskincare.com',
-  'https://beauty.tohannieesskincare.com',
-  'https://thelinkhangout.com',
-  'http://localhost:8080',
-  'http://localhost:5173',
-].filter(Boolean);
+  ...httpsOrigins,
+  ...httpOrigins
+].filter(Boolean)
 
 app.use(cors({
   origin: function (origin, callback) {
