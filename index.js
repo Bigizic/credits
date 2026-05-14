@@ -11,6 +11,8 @@ const pre_urls = [
   'thelinkhangout.com',
   'bbglownatural.com',
   'localhost:8080',
+  'localhost:3000',
+  'theragcircle.com'
 ]
 
 const httpsOrigins = pre_urls.map(url => `https://${url}`);
